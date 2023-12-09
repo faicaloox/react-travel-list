@@ -16,6 +16,7 @@ body {
   color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 #root {
@@ -47,6 +48,7 @@ h1 {
   background-color: #e5771f;
   padding: 2.8rem 0;
   display: flex;
+  flex-flow: wrap;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
@@ -96,6 +98,8 @@ input {
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0 0.8rem;
+  height: 49px;
+  text-align: center;
 }
 
 .list ul {
@@ -112,6 +116,11 @@ input {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+input[type="text"],
+select {
+  height: 49px;
+  min-width: 106px;
 }
 
 input[type="checkbox"] {
@@ -134,4 +143,43 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .add-form {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .add-form h3 {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .add-form input,
+  .add-form select,
+  .add-form button {
+    width: 100%;
+  }
+  .list ul {
+    gap: 1.5rem;
+  }
+  .list li {
+    width: 100%;
+    justify-content: center;
+  }
+  .actions button, .list select {
+    width: 100%;
+    margin: 0.8rem 0;
+  }
+
 }
